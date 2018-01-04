@@ -21,4 +21,5 @@ group :jekyll_plugins do
     gem 'jekyll-cloudinary'
     gem "autoprefixer-rails"
     gem 'jekyll-bootstrap-sass'
+    gem 'amp-jekyll'
 end

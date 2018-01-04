@@ -82,6 +82,8 @@ sass:
 feed:
   path: feed
 
+ampdir: amp
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -89,6 +91,7 @@ plugins:
   - jekyll-assets
   - jekyll-tidy
   - jekyll-bootstrap-sass
+  - amp-jekyll
 
 include:
   - _redirects
