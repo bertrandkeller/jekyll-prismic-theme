@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<h1>{{ page.data.title[0].text }}</h1>
+
+{% for content in page.data.contenu %}
+    {% if content.type == 'heading2' %}<h2>{% endif %}
+    {% if content.type == 'paragraph' %}<p>{% endif %}
+
+    {% assign element_segment = "0" | split:"," %}
+    {% assign element_url = "false" | split:"," %}
+    {% assign element_type = "false" | split:"," %}
+
+    {% for contentelement in content.spans %}
+      {% assign element_segment = element_segment | push: contentelement.start | push: contentelement.end %}
+    {% endfor %}
+    {% assign element_segment = element_segment | push: content.text.size %}
+
+    {% for index in element_segment offset: 1 %}
+      {% assign indexloop = content.spans | where: "start", index %}
+      {% for contentelements in indexloop %}
+        {% assign element_url = element_url | push: contentelements.data.url %}
+        {% assign element_type = element_type | push: contentelements.type %}
+      {% endfor %}
+      {% if indexloop.size == 0 %}
+      {% assign element_url = element_url | push: "false" %}
+      {% assign element_type = element_type | push: "false" %}
+      {% endif %}
+    {% endfor %}
+
+    {%- for contentelement in element_segment -%}{% if forloop.length > 1 %}{% assign lenght = element_segment[forloop.index] | minus: element_segment[forloop.index0] %}{% if element_type[forloop.index0] == 'hyperlink' %} <a href="{{ element_url[forloop.index0] }}">{{ content.text | slice: element_segment[forloop.index0], lenght }}</a>{% elsif element_type[forloop.index0] == 'strong' %} <{{element_type[forloop.index0]}}>{{ content.text | slice: element_segment[forloop.index0], lenght }}</{{element_type[forloop.index0]}}>{% else %}{{ content.text | slice: element_segment[forloop.index0], lenght | strip }}{% endif %}{% else %}{{ content.text }}{% endif %}{% endfor %}
+
+    {% if content.type == 'heading2' %}</h2>{% endif %}
+    {% if content.type == 'paragraph' %}</p>{% endif %}
+  {% endfor %}

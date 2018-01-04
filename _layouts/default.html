@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html>
+<head itemscope itemtype="http://schema.org/WebSite">
+  <meta charset="utf-8">
+  <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  {% include header.html %}
+<div class="container">
+	{{ content }}
+</div>
+<!-- script pointing to jekyll-search.js -->
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+  searchResultTemplate: '<h2><a href="{url}">{title}</a></h2>',
+  noResultsText: 'Pas de résultats pour cette recherche'
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Jekyll Prismic theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bertrand keller",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "json2yaml": "^1.1.0",
+    "mkdirp": "^0.5.1",
+    "prismic-javascript": "^1.5.0-beta.1"
+  },
+}

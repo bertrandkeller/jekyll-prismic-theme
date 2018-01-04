@@ -1,0 +1,19 @@
+---
+layout: default
+title: My Tiny House Website
+type: website
+---
+<h1>Articles</h1>
+
+<div id="search-container">
+  <div class="form-group">
+      <input type="text" id="search-input" class="form-control" placeholder="Rechercher" style="max-width: 35rem;">
+    </div>
+</div>
+
+<div id="results-container">
+
+{% for house in site.houses %}
+<h2><a href="{{ house.url }}">{{ house.data.title[0].text }}</a></h2>
+{% endfor %}
+</div>
