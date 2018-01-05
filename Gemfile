@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem "jekyll", "3.6.0"
+gem 'bootstrap', '~> 4.0.0.beta3'
 
 group :development do
     gem 'rake'
