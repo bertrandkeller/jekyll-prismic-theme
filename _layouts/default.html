@@ -37,7 +37,7 @@ layout: default
 	{{ content }}
 </div>
 
-{% if jekyll.environment != 'amp' %}
+{% if site.environment != 'amp' %}
   <script type="application/javascript" src="{{'/assets/js/jquery.min.js' | prepend: site.baseurl}}"></script>
   <script type="application/javascript" src="{{'/assets/js/bootstrap.bundle.min.js' | prepend: site.baseurl}}"></script>
   <!-- script pointing to jekyll-search.js -->
