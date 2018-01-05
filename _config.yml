@@ -76,8 +76,12 @@ compress_html:
     envs: development
 
 sass:
-  sass_dir: _sass
-  style: compressed
+    load_paths:
+        - _sass
+        - node_modules
+    style: compressed
+
+
 
 feed:
   path: feed
@@ -90,7 +94,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-assets
   - jekyll-tidy
-  - jekyll-bootstrap-sass
   - amp-jekyll
 
 include:
@@ -114,9 +117,19 @@ exclude:
   - tmp
   - LICENSE.md
   - README.md
-  - dploy.yml
   - LICENSE
-  - node_modules
+  - node_modules/encoding
+  - node_modules/fetch-everywhere
+  - node_modules/fs
+  - node_modules/iconv-lite
+  - node_modules/is-stream
+  - node_modules/json2yaml
+  - node_modules/minimist
+  - node_modules/mkdirp
+  - node_modules/node-fetch
+  - node_modules/prismic-javascript
+  - node_modules/remedial
+  - node_modules/whatwg-fetch
 
 jekyll_tidy:
   compress_html: true
