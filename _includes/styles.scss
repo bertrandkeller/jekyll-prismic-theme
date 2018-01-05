@@ -3,12 +3,12 @@
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
-@import "bootstrap/scss/button";
+@import "bootstrap/scss/buttons";
 
 .content {
   font-size: $custom-font-size;
 }
 
 #search-input {
-  max-width: 35rem;
+  display: none;
 }
