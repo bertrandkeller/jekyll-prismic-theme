@@ -94,7 +94,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-assets
   - jekyll-tidy
-  - amp-jekyll
 
 include:
   - _redirects
@@ -109,8 +108,11 @@ exclude:
   - .travis.yml
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
   - Procfile
   - Rakefile
+  - Makefile
   - script
   - vendor
   - gems
@@ -118,21 +120,10 @@ exclude:
   - LICENSE.md
   - README.md
   - LICENSE
-  - node_modules/encoding
-  - node_modules/fetch-everywhere
-  - node_modules/fs
-  - node_modules/iconv-lite
-  - node_modules/is-stream
-  - node_modules/json2yaml
-  - node_modules/minimist
-  - node_modules/mkdirp
-  - node_modules/node-fetch
-  - node_modules/prismic-javascript
-  - node_modules/remedial
-  - node_modules/whatwg-fetch
+  - node_modules
 
 jekyll_tidy:
-  compress_html: true
+  compress_html: false
   exclude: ["sw.js","404.html","offline.md"]
 
 assets:

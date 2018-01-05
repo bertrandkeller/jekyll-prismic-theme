@@ -9,12 +9,15 @@
   "author": "bertrand keller",
   "license": "ISC",
   "devDependencies": {
+    "ampify": "^0.2.6",
+    "bootstrap": "4.0.0-beta.2",
     "fs": "0.0.1-security",
+    "jquery": ">=3.0.0",
     "json2yaml": "^1.1.0",
     "mkdirp": "^0.5.1",
-    "prismic-javascript": "^1.5.0-beta.1",
-    "bootstrap": "4.0.0-beta.2",
-    "jquery": ">=3.0.0",
-    "popper.js": "^1.11.0"
+    "prismic-javascript": "^1.5.0-beta.1"
+  },
+  "dependencies": {
+    "html-to-amp": "^2.0.2"
   }
 }

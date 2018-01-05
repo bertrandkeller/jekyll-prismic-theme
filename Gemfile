@@ -20,5 +20,4 @@ group :jekyll_plugins do
     gem 'jekyll-tidy'
     gem 'jekyll-cloudinary'
     gem "autoprefixer-rails"
-    gem 'amp-jekyll'
 end
