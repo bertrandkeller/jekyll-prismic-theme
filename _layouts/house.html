@@ -29,7 +29,9 @@ layout: default
       {% endif %}
     {% endfor %}
 
-    {%- for contentelement in element_segment -%}{% if forloop.length > 1 %}{% assign lenght = element_segment[forloop.index] | minus: element_segment[forloop.index0] %}{% if element_type[forloop.index0] == 'hyperlink' %} <a href="{{ element_url[forloop.index0] }}">{{ content.text | slice: element_segment[forloop.index0], lenght }}</a>{% elsif element_type[forloop.index0] == 'strong' %} <{{element_type[forloop.index0]}}>{{ content.text | slice: element_segment[forloop.index0], lenght }}</{{element_type[forloop.index0]}}>{% else %}{{ content.text | slice: element_segment[forloop.index0], lenght | strip }}{% endif %}{% else %}{{ content.text }}{% endif %}{% endfor %}
+    {%- for contentelement in element_segment -%}
+    {% if forloop.length > 1 %}{% assign lenght = element_segment[forloop.index] | minus: element_segment[forloop.index0] %}{% if element_type[forloop.index0] == 'hyperlink' %} <a href="{{ element_url[forloop.index0] }}">{{ content.text | slice: element_segment[forloop.index0], lenght }}</a>{% elsif element_type[forloop.index0] == 'strong' %} <{{element_type[forloop.index0]}}>{{ content.text | slice: element_segment[forloop.index0], lenght }}</{{element_type[forloop.index0]}}>{% else %}{{ content.text | slice: element_segment[forloop.index0], lenght | strip }}{% endif %}{% else %}{{ content.text }}{% endif %}
+    {%- endfor -%}
 
     {% if content.type == 'heading2' %}</h2>{% endif %}
     {% if content.type == 'paragraph' %}</p>{% endif %}

@@ -34,8 +34,7 @@ include-yarn-deps:
 build: install include-yarn-deps
 	node script/index.js
 	$(JEKYLL) build
-	node script/amp.js
-	$(JEKYLL) build --config _config.yml,_config-amp.yml
+	$(JEKYLL) build JEKYLL_ENV=amp --config _config.yml -d "_site/amp"
 
 serve: install include-yarn-deps
 	JEKYLL_ENV=production $(JEKYLL) serve

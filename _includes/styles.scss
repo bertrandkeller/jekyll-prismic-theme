@@ -1,5 +1,9 @@
 @import "variables";
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/button";
 
 .content {
   font-size: $custom-font-size;
