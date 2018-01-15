@@ -86,13 +86,10 @@ sass:
 feed:
   path: feed
 
-ampdir: amp
-
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-assets
   - jekyll-tidy
 
 include:

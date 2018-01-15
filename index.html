@@ -7,13 +7,12 @@ type: website
 
 <div id="search-container">
   <div class="form-group">
-      <input type="text" id="search-input" class="form-control" placeholder="Rechercher">
-    </div>
+    <input type="text" id="search-input" class="form-control" placeholder="Rechercher">
+  </div>
 </div>
 
-<div id="results-container">
-
+<div id="search-results" class="search-results">
 {% for house in site.houses %}
-<h2><a href="{{ house.url }}">{{ house.data.title[0].text }}</a></h2>
+<h2><a href="{{ house.url }}">{{ house.data.title[0].text }}</a> <small>{{ house.relative_path | split: '/' | first | replace: "_", "" }}</small></h2>
 {% endfor %}
 </div>

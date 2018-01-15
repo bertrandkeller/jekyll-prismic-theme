@@ -41,17 +41,7 @@ layout: default
   <script type="application/javascript" src="{{'/assets/js/jquery.min.js' | prepend: site.baseurl}}"></script>
   <script type="application/javascript" src="{{'/assets/js/bootstrap.bundle.min.js' | prepend: site.baseurl}}"></script>
   <!-- script pointing to jekyll-search.js -->
-  <script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.min.js"></script>
-  <script>
-    SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<h2><a href="{url}">{title}</a></h2>',
-    noResultsText: 'Pas de résultats pour cette recherche'
-  })
-  </script>
+  {% include search.js %}
 {% endif %}
-
 </body>
 </html>
