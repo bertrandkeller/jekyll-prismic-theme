@@ -13,11 +13,13 @@
     "bootstrap": "4.0.0-beta.2",
     "cloudinary": "^1.10.0",
     "cloudinary-bulk-image-downloader": "0.0.1",
+    "file-exists": "^5.0.1",
     "fs": "0.0.1-security",
     "jquery": ">=3.0.0",
     "json2yaml": "^1.1.0",
     "mkdirp": "^0.5.1",
-    "prismic-javascript": "^1.5.0-beta.1"
+    "prismic-javascript": "^1.5.0-beta.1",
+    "request": "^2.83.0"
   },
   "dependencies": {
     "html-to-amp": "^2.0.2"

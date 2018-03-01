@@ -33,6 +33,7 @@ include-yarn-deps:
 
 build: install include-yarn-deps
 	node script/index.js
+  node script/cloudinary.js
 	$(JEKYLL) build
 	$(JEKYLL) build --config _config.yml,_config-amp.yml
 
