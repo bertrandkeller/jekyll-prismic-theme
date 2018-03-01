@@ -36,7 +36,7 @@ cloudinary.v2.api.resources(function (error, result) {
     imageExist = fileExists.sync(imagePath + imageName)
     if (!imageExist) {
         download(imageThumb, imagePath + imageName, function(){
-          console.log('Image uploaded form cloudinary');
+          console.log(imageName + 'uploaded from cloudinary');
         });
       }
 

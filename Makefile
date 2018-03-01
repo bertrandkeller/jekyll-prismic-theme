@@ -32,8 +32,8 @@ include-yarn-deps:
 	cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $(VENDOR_DIR)
 
 build: install include-yarn-deps
+	node script/cloudinary.js
 	node script/index.js
-  node script/cloudinary.js
 	$(JEKYLL) build
 	$(JEKYLL) build --config _config.yml,_config-amp.yml
 
