@@ -1,10 +1,10 @@
-# backend:
-#   name: github
-#   repo: ecole-des-lettres/ecole-des-lettres-magazine # Path to your Github repository
-#   branch: master # Branch to update (master by default)
-
 backend:
-  name: git-gateway
+  name: github
+  repo: bertrandkeller/jekyll-prismic-theme.git # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+# backend:
+#   name: git-gateway
 
 media_folder: "images/" # Folder where user uploaded files should go
 
