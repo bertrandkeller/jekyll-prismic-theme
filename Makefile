@@ -3,6 +3,7 @@ BUNDLE := bundle
 YARN := npm
 VENDOR_DIR = assets/js/
 JEKYLL := $(BUNDLE) exec jekyll
+IMAGE_DIR := images
 
 PROJECT_DEPS := Gemfile package.json
 
@@ -32,6 +33,7 @@ include-yarn-deps:
 	cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js $(VENDOR_DIR)
 
 build: install include-yarn-deps
+	if [ -d "$(IMAGE_DIR)" ]; then echo "Directory $(IMAGE_DIR) exists."; else echo "Error: Directory $(IMAGE_DIR) does not exists." && mkdir $(IMAGE_DIR); fi
 	node script/cloudinary.js
 	node script/index.js
 	$(JEKYLL) build
