@@ -1,0 +1,32 @@
+# backend:
+#   name: github
+#   repo: ecole-des-lettres/ecole-des-lettres-magazine # Path to your Github repository
+#   branch: master # Branch to update (master by default)
+
+backend:
+  name: git-gateway
+
+media_folder: "images/" # Folder where user uploaded files should go
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "houses" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: houses" # Used in the UI, ie.: "New Post"
+    folder: "_houses/"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Type", name: "type", widget: "string"}
+      - name: images
+        label: Images
+        widget: relation
+        collection: images
+        searchFields: [url]
+        valueField: url
+  - name: "images"
+    label: "Images"
+    editor:
+      preview: false
+    files:
+      - name: "images"
+        label: "Images"
+        file: "_data/cloudinary.yml"

@@ -8,7 +8,7 @@ PROJECT_DEPS := Gemfile package.json
 
 .PHONY: all clean install update
 
-all : serve
+all: serve
 
 check:
 	$(JEKYLL) doctor

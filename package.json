@@ -11,6 +11,8 @@
   "devDependencies": {
     "ampify": "^0.2.6",
     "bootstrap": "4.0.0-beta.2",
+    "cloudinary": "^1.10.0",
+    "cloudinary-bulk-image-downloader": "0.0.1",
     "fs": "0.0.1-security",
     "jquery": ">=3.0.0",
     "json2yaml": "^1.1.0",
