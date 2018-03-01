@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: bertrandkeller/jekyll-prismic-theme.git # Path to your Github repository
+  repo: bertrandkeller/jekyll-prismic-theme # Path to your Github repository
   branch: master # Branch to update (master by default)
 
 # backend:
