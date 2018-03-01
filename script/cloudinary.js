@@ -14,7 +14,7 @@ cloudinary.v2.api.resources(function (error, result) {
     listurl += "- url: " +result.resources[key].url + "\n"
   }
   console.log(listurl)
-  fs.writeFile("_data/cloudinary.yaml", listurl, 'utf8', function (err) {
+  fs.writeFile("_data/cloudinary.yml", listurl, 'utf8', function (err) {
     if (err) {
       return console.log(err);
     }
